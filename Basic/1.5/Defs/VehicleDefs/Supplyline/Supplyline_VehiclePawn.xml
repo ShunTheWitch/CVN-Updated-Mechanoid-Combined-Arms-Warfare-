@@ -216,9 +216,6 @@
 		</components>
 
 		<comps>
-      <li Class="CompProperties_Effecter">
-        <effecterDef>Coffin_Effect</effecterDef>
-      </li>
         <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>

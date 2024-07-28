@@ -168,7 +168,6 @@
       <explosionRadius>1.8</explosionRadius>
       <arcHeightFactor>20</arcHeightFactor>
       <shadowSize>0.6</shadowSize>
-      <explosionEffect>Test_BeamVoid</explosionEffect>
     </projectile>
 		<modExtensions>
 			<li Class="taranchuk_projectiletrails.RocketExtension">
