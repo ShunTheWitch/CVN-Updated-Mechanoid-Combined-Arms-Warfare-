@@ -407,7 +407,7 @@
 				</bomberSettings>-->
 				<gunshipSettings>
 					<npcStock>
-						<CVNAmmoMissile>60~120</CVNAmmoMissile>
+						<CVNAmmoMissile>50</CVNAmmoMissile>
 					</npcStock>
 					<gunshipMode>Hovering</gunshipMode>
 					<distanceFromTarget>30</distanceFromTarget>
