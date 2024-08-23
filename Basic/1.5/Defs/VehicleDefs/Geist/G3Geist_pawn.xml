@@ -202,27 +202,28 @@
 				<flightMode>
 					<label>Flight mode</label>
 					<description>Toggle flight mode.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
+					<texPath>Gizmo/TakeOff_Icon</texPath>
 				</flightMode>
-				<hoverMode>
-					<label>Hover mode</label>
-					<description>Toggle hover mode.</description>
+				<!-- WIP feature. Didn't manage to achieve fully autonomous landing, but maybe can be finished later
+				<landOnGround>
+					<label>Land on ground</label>
+					<description>Designate a landing plan. Select an endpoint of the runway and a starting point for landing.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
-				</hoverMode>
+				</landOnGround> -->
 				<faceTarget>
 					<label>Face target (hover)</label>
 					<description>Face target while hovering.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
+					<texPath>Gizmo/FaceTarget_Icon</texPath>
 				</faceTarget>
 				<cancelFaceTarget>
 					<label>Cancel face target</label>
 					<description>Cancel face target.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
+					<texPath>Gizmo/FaceTargetStop_Icon</texPath>
 				</cancelFaceTarget>
 				<chaseTarget>
 					<label>Chase target (flight)</label>
 					<description>Chase target while flying.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
+					<texPath>Gizmo/ChaseTarger_Icon</texPath>
 				</chaseTarget>
 			</flightCommands>
 			<bombOptions>
@@ -233,38 +234,40 @@
 						<Steel>10</Steel>
 						<Chemfuel>20</Chemfuel>
 					</costList>
-					<projectile>CVN_ShockBomb</projectile>
+					<projectile>CVN_BombHighExplosive</projectile>
 					<cooldownTicks>60</cooldownTicks>
 				</li>
 				<li>
 					<label>Incendionary bomb</label>
 					<texPath>Things/Projectile/ShellIncendiary</texPath>
 					<costList>
+						<Steel>10</Steel>
+						<Chemfuel>20</Chemfuel>
 					</costList>
 					<projectile>CVN_BombIncendiary</projectile>
 					<cooldownTicks>60</cooldownTicks>
 				</li>
 			</bombOptions>
-			<flightSpeedPerTick>0.4</flightSpeedPerTick>
-			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
-			<turnAnglePerTick>2</turnAnglePerTick>
-			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
-			<takeoffTicks>120</takeoffTicks>
-			<landingTicks>120</landingTicks>
+			<flightSpeedPerTick>0.3</flightSpeedPerTick>
+			<flightSpeedTurningPerTick>0.2</flightSpeedTurningPerTick>
+			<turnAnglePerTick>0.4</turnAnglePerTick>
+			<turnAngleCirclingPerTick>2</turnAngleCirclingPerTick>
+			<distanceFromTargetToStartTurningChaseMode>30</distanceFromTargetToStartTurningChaseMode>
+			<distanceFromTargetToStartTurningCircleMode>20</distanceFromTargetToStartTurningCircleMode>
+			<takeoffTicks>300</takeoffTicks>
+			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
 			<runwayTerrainRequirements>
 				<li>Medium</li>
 				<li>Heavy</li>
 			</runwayTerrainRequirements>
 			<flightGraphicData>
-				<texPath>Things/Vehicles/Geist/G3GeistFlight</texPath>
-				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-				<shaderType>CutoutComplexPattern</shaderType>
-				<drawSize>(23,12)</drawSize>
-				<drawRotated>true</drawRotated>
-				<color>(255, 255, 255)</color>
+			<texPath>Things/Vehicles/Geist/G3GeistLanded</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(23,12)</drawSize>
+			<drawRotated>true</drawRotated>
+			<color>(155, 155, 155)</color>
 			</flightGraphicData>
 			<flightFlecks>
 				<li>
@@ -337,23 +340,25 @@
 			<AISettings>
 				<bomberSettings>
 					<npcStock>
-						<Steel>900</Steel>
-						<Chemfuel>900</Chemfuel>
+						<Steel>100</Steel>
+						<Chemfuel>200</Chemfuel>
 					</npcStock>
-					<maxBombRun>9</maxBombRun>
+					<maxBombRun>5</maxBombRun>
 					<blacklistedBombs>
 						<li>CVN_BombIncendiary</li>
 					</blacklistedBombs>
-					<distanceFromTarget>5</distanceFromTarget>
+					<distanceFromTarget>20</distanceFromTarget>
 				</bomberSettings>
 				<gunshipSettings>
 					<npcStock>
-						<CVNAmmoMissile>60~120</CVNAmmoMissile>
+						<CVNAmmoMissile>50</CVNAmmoMissile>
 					</npcStock>
 					<gunshipMode>Chasing</gunshipMode>
 					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>
+			
+			<damageMultiplierFromNonAntiAirProjectiles>0.3</damageMultiplierFromNonAntiAirProjectiles>
 		</li>
 		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
 			<pickupAreaSize>(10, 5)</pickupAreaSize>

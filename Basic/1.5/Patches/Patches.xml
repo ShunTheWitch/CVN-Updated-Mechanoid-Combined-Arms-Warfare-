@@ -29,7 +29,7 @@
                 <minAircraftCount>1</minAircraftCount>
                 <maxAircraftCount>2</maxAircraftCount>
                 <options>
-			<Valkyriepawn_PawnKind MayRequire="Grimworld.Vehicles">3</Valkyriepawn_PawnKind>
+					<CVNG3Geist_PawnKind>3</CVNG3Geist_PawnKind>
 
                 </options>
             </li>
